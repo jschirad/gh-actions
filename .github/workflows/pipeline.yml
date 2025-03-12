@@ -9,22 +9,12 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - run: echo "Hola, mundo!"
+    - run: echo "Aqui construimos la aplicacion"
 
-    - name: Ejecutar un script
-      run: |
-        ls -la
-        echo "Este es un script de bash"
-        
   test:
     runs-on: ubuntu-latest
-
+    needs: build
     steps:
     - uses: actions/checkout@v2
 
-    - run: echo "Hola, mundo!"
-
-    - name: Ejecutar un script
-      run: |
-        ls -la
-        echo "Este es un script de bash"
+    - run: echo "Aqui ejecutamos las pruebas"

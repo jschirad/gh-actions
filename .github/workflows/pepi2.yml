@@ -1,6 +1,6 @@
 name: Mi segundo pipeline
 
-on: push
+on: workflow_dispatch
 
 jobs:
   build:
